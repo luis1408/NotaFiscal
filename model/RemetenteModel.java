@@ -1,8 +1,14 @@
 package model;
 
 public class RemetenteModel {
-    long cpf_cnpj;
-    String nome_RazãoSocial;
-    long inscriçãoEstadual;
 
+    PessoaFisicaJuridicaModel pessoaFisicaJuridicaModel;
+
+    public void setPessoaFisicaJuridicaModel(PessoaFisicaJuridicaModel pessoaFisicaJuridicaModel) {
+        this.pessoaFisicaJuridicaModel = pessoaFisicaJuridicaModel;
+    }
+
+    public PessoaFisicaJuridicaModel getPessoaFisicaJuridicaModel() {
+        return pessoaFisicaJuridicaModel;
+    }
 }
