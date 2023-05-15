@@ -28,12 +28,6 @@ public class MenuView {
 
     public boolean menuPrincupal() {
         String subMenu;
-        String cnpj;
-        int id;
-        int posicao;
-        int numero;
-        Double valor;
-
         
 
         System.out.printf(

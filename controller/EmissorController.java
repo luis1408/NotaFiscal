@@ -10,7 +10,7 @@ public class EmissorController {
         int x = 10;
         for (int i = 1; i < x; i++){
             EmissorModel emissor = new EmissorModel();
-            emissor.set
+            emissor.se
 
         }
     }
