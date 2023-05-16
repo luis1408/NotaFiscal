@@ -1,9 +1,9 @@
 package model;
 
 public class EmissorModel {
-    long CNPJ; 
+    long CNPJ;
     long IncriçãoEstadualSubTributaria;
-    PessoaModel pessoaModel;
+    PessoaModel pessoaModel = new PessoaModel();
 
     public void setCNPJ(long cNPJ) {
         CNPJ = cNPJ;
