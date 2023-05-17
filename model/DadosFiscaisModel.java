@@ -8,7 +8,7 @@ public class DadosFiscaisModel {
     String NaturezaDaOperação;
     long ProtocoloDeAutorizaçãoDeUso;
     String site = "www.nfe.fazenda.gov.br/portal ou site da Sefaz Autorizadora";
-    DatasModel datasModel;
+    DatasModel datasModel = new DatasModel();
 
     public void setNumero(long numero) {
         this.numero = numero;

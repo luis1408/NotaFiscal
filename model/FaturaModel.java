@@ -2,8 +2,8 @@ package model;
 
 public class FaturaModel {
 
-    ValoresModel valoresModel;
-    DatasModel datasModel;
+    ValoresModel valoresModel = new ValoresModel();
+    DatasModel datasModel = new DatasModel();
 
     public void setDatasModel(DatasModel datasModel) {
         this.datasModel = datasModel;
