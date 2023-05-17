@@ -84,6 +84,10 @@ public class MenuView {
                 ListaTransporte = transporte.fakerTransporte(ListaTransporte);
                 ValoresController valores = new ValoresController(); 
                 ListaValores = valores.fakerValores(ListaValores);
+                for(int i = 0; i < calculoImposto.size(); i++) {   
+                    System.out.print(calculoImposto.get(i));
+                }
+                System.out.println(Arrays.toString(calculoImposto.toArray() ));
                 
                 break;
             case 2:

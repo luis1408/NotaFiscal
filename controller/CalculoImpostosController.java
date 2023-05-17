@@ -33,8 +33,21 @@ public class CalculoImpostosController {
             calculoImposto.setValoresModel(valoresModel);
 
             ListaImpostos.add(calculoImposto);
+            
         }
         return ListaImpostos;
+    }
+
+	public long[] toArray() {
+		return null;
+	}
+
+    public int size() {
+        return 0;
+    }
+
+    public char[] get(int i) {
+        return null;
     }
    
 }
