@@ -7,7 +7,7 @@ import controller.*;
 import model.*;
 public class MenuView {
 
-        private ArrayList<CalculoImpostosModel> ListaImpostos = new ArrayList<CalculoImpostosModel>();
+        private ArrayList<CalculoImpostosModel> listaImpostos = new ArrayList<CalculoImpostosModel>();
         private ArrayList<CalculoIssqnModel> ListaCalculoIssqn = new ArrayList<CalculoIssqnModel>();
         private ArrayList<DadosFiscaisModel> ListaDadosFiscais = new ArrayList<DadosFiscaisModel>();
         private ArrayList<DatasModel> ListaDatas = new ArrayList<DatasModel>();
@@ -51,6 +51,10 @@ public class MenuView {
     public boolean menuPrincupal() {
         String subMenu;
         int opcao;
+        int num;
+        String rs;
+        long cpfCnpj;
+        long valorTotal;
         
         try {
             System.out.printf(
@@ -65,7 +69,7 @@ public class MenuView {
                 //System.out.println("Quantidade: ");
                 //int x = leia.nextInt();
                 CalculoImpostosController calculoImposto = new CalculoImpostosController(); 
-                ListaImpostos = calculoImposto.fakerCalculoImpostos(ListaImpostos);
+                listaImpostos = calculoImposto.fakerCalculoImpostos(listaImpostos);
                 CalculoIssqnController calculoIssqn = new CalculoIssqnController(); 
                 ListaCalculoIssqn = calculoIssqn.fakerCalculoIssqn(ListaCalculoIssqn);
                 DadosFiscaisController dadosFiscais = new DadosFiscaisController(); 
@@ -84,10 +88,6 @@ public class MenuView {
                 ListaTransporte = transporte.fakerTransporte(ListaTransporte);
                 ValoresController valores = new ValoresController(); 
                 ListaValores = valores.fakerValores(ListaValores);
-                for(int i = 0; i < calculoImposto.size(); i++) {   
-                    System.out.print(calculoImposto.get(i));
-                }
-                System.out.println(Arrays.toString(calculoImposto.toArray() ));
                 
                 break;
             case 2:
@@ -111,7 +111,7 @@ public class MenuView {
                         break;
                     case "c":                        
                         CalculoImpostosController calculoImpostos = new CalculoImpostosController(); 
-                        ListaImpostos = calculoImpostos.fakerCalculoImpostos(ListaImpostos);
+                        listaImpostos = calculoImpostos.fakerCalculoImpostos(listaImpostos);
                         break;
                     case "d":
                         TransporteController transportes = new TransporteController(); 
@@ -126,11 +126,11 @@ public class MenuView {
                 FaturaController fat = new FaturaController(); 
                 ListaFatura = fat.fakerFatura(null);
                 CalculoImpostosController calImp = new CalculoImpostosController(); 
-                ListaImpostos = calImp.fakerCalculoImpostos(null);
+                listaImpostos = calImp.fakerCalculoImpostos(null);
                 TransporteController trans = new TransporteController(); 
                 ListaTransporte = trans.fakerTransporte(ListaTransporte);
                 CalculoImpostosController calImpo = new CalculoImpostosController(); 
-                ListaImpostos = calImpo.fakerCalculoImpostos(null);
+                listaImpostos = calImpo.fakerCalculoImpostos(null);
                 CalculoIssqnController calIssqn = new CalculoIssqnController(); 
                 ListaCalculoIssqn = calIssqn.fakerCalculoIssqn(null);
                 DadosFiscaisController dadosFis = new DadosFiscaisController(); 
@@ -163,21 +163,53 @@ public class MenuView {
                 }
                 switch (subMenu) {
                     case "a":
+                        try {
+                            System.out.println("\nNúmero:\n   :: ");
+                            num = leia.nextInt();
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Opção Invalída!");
+                            num = leia.nextInt();
+                        }
                         
                         break;
                     case "b":
+                        try {
+                            System.out.println("\nRazão Social:\n   :: ");
+                            rs = leia.next();
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Opção Invalída!");
+                            rs = leia.next();
+                        }
                         
                         break;
                     case "c":
+                        try {
+                            System.out.println("\nCNPJ/CPF:\n   :: ");
+                            cpfCnpj = leia.nextLong();
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Opção Invalída!");
+                            cpfCnpj = leia.nextLong();
+                        }
                         
                         break;
                     case "d":
+                        try {
+                            System.out.println("\nValor Total:\n   :: ");
+                            valorTotal = leia.nextLong();
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Opção Invalída!");
+                            valorTotal = leia.nextLong();
+                        }
                         
                         break;
                 }
                 break;
             case 5:
-            System.out.println(Arrays.toString( this.calculoImposto.toArray() ));
+            //System.out.println(Arrays.toString( CalculoImpostosController calculoImposto));
 
                 //System.out.println(ListaDatas);
                 break;
