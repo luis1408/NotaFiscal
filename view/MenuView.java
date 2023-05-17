@@ -26,15 +26,7 @@ public class MenuView {
         }
     }
 
-    public boolean menuPrincupal() {
-        String subMenu;
-        String cnpj;
-        int id;
-        int posicao;
-        int numero;
-        Double valor;
-
-        
+    public boolean menuPrincupal() {        
 
         System.out.printf(
                 "\n\n1. Incluir\n2. Alterar NF-e\n3. Excluir NF-e\n4. Consultar \n5. Listagem de NF-e\n6. Sair\n:: ");
