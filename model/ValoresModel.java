@@ -11,9 +11,8 @@ public class ValoresModel {
     double valorDoSeguro;
     double desconto;
     double outrasDespesasAcessorias;
-    double valorDoIpi;
     double valorTotalDosImpostos;
-    double valorTotalDaNota;
+    int valorTotalDaNota;
     double valorUnitario;
     double valorTotal;
     double valorIpi;
@@ -102,14 +101,6 @@ public class ValoresModel {
         return valorDoIcmsSubstituicao;
     }
 
-    public void setValorDoIpi(double valorDoIpi) {
-        this.valorDoIpi = valorDoIpi;
-    }
-
-    public double getValorDoIpi() {
-        return valorDoIpi;
-    }
-
     public void setValorDoSeguro(double valorDoSeguro) {
         this.valorDoSeguro = valorDoSeguro;
     }
@@ -142,11 +133,11 @@ public class ValoresModel {
         return valorTotal;
     }
 
-    public void setValorTotalDaNota(double valorTotalDaNota) {
+    public void setValorTotalDaNota(int valorTotalDaNota) {
         this.valorTotalDaNota = valorTotalDaNota;
     }
 
-    public double getValorTotalDaNota() {
+    public int getValorTotalDaNota() {
         return valorTotalDaNota;
     }
 

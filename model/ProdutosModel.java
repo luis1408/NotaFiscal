@@ -8,6 +8,7 @@ public class ProdutosModel {
     int cfop;
     int unid;
     int qtd;
+    ValoresModel valoresModel = new ValoresModel();
 
     public void setCfop(int cfop) {
         this.cfop = cfop;
@@ -63,5 +64,13 @@ public class ProdutosModel {
 
     public int getUnid() {
         return unid;
+    }
+
+    public void setValoresModel(ValoresModel valoresModel) {
+        this.valoresModel = valoresModel;
+    }
+
+    public ValoresModel getValoresModel() {
+        return valoresModel;
     }
 }

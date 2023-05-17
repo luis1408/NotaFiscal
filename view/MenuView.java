@@ -1,5 +1,6 @@
 package view;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import controller.*;
@@ -17,6 +18,27 @@ public class MenuView {
         private ArrayList<TransporteModel> ListaTransporte = new ArrayList<TransporteModel>();
         private ArrayList<ValoresModel> ListaValores = new ArrayList<ValoresModel>();
 
+        CalculoImpostosController calculoImposto = new CalculoImpostosController(); 
+                
+                CalculoIssqnController calculoIssqn = new CalculoIssqnController(); 
+                
+                DadosFiscaisController dadosFiscais = new DadosFiscaisController(); 
+                
+                DatasController datas = new DatasController(); 
+                
+                EmissorController emissor = new EmissorController(); 
+                
+                FaturaController fatura = new FaturaController(); 
+                
+                ProdutosController produtos = new ProdutosController(); 
+                
+                RemetenteController remetente = new RemetenteController(); 
+                
+                TransporteController transporte = new TransporteController(); 
+                
+                ValoresController valores = new ValoresController(); 
+                
+
         Scanner leia = new Scanner(System.in).useDelimiter("\r?\n");
 
     public MenuView() {
@@ -33,8 +55,7 @@ public class MenuView {
         try {
             System.out.printf(
                 "\n\n1. Incluir\n2. Alterar NF-e\n3. Excluir NF-e\n4. Consultar \n5. Listagem de NF-e\n6. Sair\n:: ");
-            opcao = leia.nextInt();
-            break;
+            opcao = leia.nextInt();                        
         } catch (Exception e) {
             System.out.println("Opção Invalída!");
             opcao = leia.nextInt();
@@ -43,18 +64,18 @@ public class MenuView {
             case 1:
                 //System.out.println("Quantidade: ");
                 //int x = leia.nextInt();
-                CalculoImpostosController calculoImpostos = new CalculoImpostosController(); 
-                ListaImpostos = calculoImpostos.fakerCalculoImpostos(ListaImpostos);
+                CalculoImpostosController calculoImposto = new CalculoImpostosController(); 
+                ListaImpostos = calculoImposto.fakerCalculoImpostos(ListaImpostos);
                 CalculoIssqnController calculoIssqn = new CalculoIssqnController(); 
                 ListaCalculoIssqn = calculoIssqn.fakerCalculoIssqn(ListaCalculoIssqn);
                 DadosFiscaisController dadosFiscais = new DadosFiscaisController(); 
                 ListaDadosFiscais = dadosFiscais.fakerDadosFiscais(ListaDadosFiscais);
                 DatasController datas = new DatasController(); 
                 ListaDatas = datas.fakerDatas(ListaDatas);
-                EmissorController faker = new EmissorController(); 
-                ListaEmissor = faker.fakerEmissor(ListaEmissor);
-                FaturaController faturas = new FaturaController(); 
-                ListaFatura = faturas.fakerFatura(ListaFatura);
+                EmissorController emissor = new EmissorController(); 
+                ListaEmissor = emissor.fakerEmissor(ListaEmissor);
+                FaturaController fatura = new FaturaController(); 
+                ListaFatura = fatura.fakerFatura(ListaFatura);
                 ProdutosController produtos = new ProdutosController(); 
                 ListaProdutos = produtos.fakerProdutos(ListaProdutos);
                 RemetenteController remetente = new RemetenteController(); 
@@ -77,28 +98,56 @@ public class MenuView {
                 }
                 switch (subMenu) {
                     case "a":
-                        RemetenteController remetente = new RemetenteController(); 
-                        ListaRemetente = remetente.fakerRemetente(ListaRemetente);
+                        RemetentesController remetentes = new RemetentesController(); 
+                        ListaRemetente = remetentes.fakerRemetente(ListaRemetente);
                         break;
                     case "b":
                         FaturaController faturas = new FaturaController(); 
                         ListaFatura = faturas.fakerFatura(ListaFatura);
                         break;
-                    case "c":
+                    case "c":                        
                         CalculoImpostosController calculoImpostos = new CalculoImpostosController(); 
                         ListaImpostos = calculoImpostos.fakerCalculoImpostos(ListaImpostos);
                         break;
                     case "d":
-                        TransporteController transporte = new TransporteController(); 
-                        ListaTransporte = transporte.fakerTransporte(ListaTransporte);
+                        TransporteController transportes = new TransporteController(); 
+                        ListaTransporte = transportes.fakerTransporte(ListaTransporte);
                         break;
+                    
                 }
                 break;
             case 3:
-                
-                }
+                RemetentesController remet = new RemetentesController(); 
+                ListaRemetente = remet.fakerRemetente(null);
+                FaturaController fat = new FaturaController(); 
+                ListaFatura = fat.fakerFatura(null);
+                CalculoImpostosController calImp = new CalculoImpostosController(); 
+                ListaImpostos = calImp.fakerCalculoImpostos(null);
+                TransporteController trans = new TransporteController(); 
+                ListaTransporte = trans.fakerTransporte(ListaTransporte);
+                CalculoImpostosController calImpo = new CalculoImpostosController(); 
+                ListaImpostos = calImpo.fakerCalculoImpostos(null);
+                CalculoIssqnController calIssqn = new CalculoIssqnController(); 
+                ListaCalculoIssqn = calIssqn.fakerCalculoIssqn(null);
+                DadosFiscaisController dadosFis = new DadosFiscaisController(); 
+                ListaDadosFiscais = dadosFis.fakerDadosFiscais(null);
+                DatasController data = new DatasController(); 
+                ListaDatas = data.fakerDatas(null);
+                EmissorController emis = new EmissorController(); 
+                ListaEmissor = emis.fakerEmissor(null);
+                FaturaController fa = new FaturaController(); 
+                ListaFatura = fa.fakerFatura(null);
+                ProdutosController prod = new ProdutosController(); 
+                ListaProdutos = prod.fakerProdutos(null);
+                RemetenteController rem = new RemetenteController(); 
+                ListaRemetente = rem.fakerRemetente(null);
+                TransporteController transp = new TransporteController(); 
+                ListaTransporte = transp.fakerTransporte(null);
+                ValoresController val = new ValoresController(); 
+                ListaValores = val.fakerValores(null);
                 break;
             case 4:
+            
                 try {
                     System.out.printf(
                             "\na. Consulta pelo número da NF-e\nb. Consulta pela razão social do cliente\nc. Consulta pelo CNPJ/CPF do cliente\nd. Consulta pelo valor total da NF-e\n   :: ");
@@ -110,34 +159,23 @@ public class MenuView {
                 }
                 switch (subMenu) {
                     case "a":
-                        System.out.println("Quantidade: ");
-                        int x = leia.nextInt();
-                        this.receberView.entrar();
-                        this.receberController.incluir(this.receberView.getReceber(), x);
+                        
                         break;
                     case "b":
-                        System.out.printf("\nInforme o número: ");
-                        numero = leia.nextInt();
-                        this.receberView.entrar();
-                        this.receberController.alterarPeloNumero(numero);
+                        
                         break;
                     case "c":
-                        System.out.printf("\nInforme o nome do cliente: ");
-                        String nome = leia.next();
-                        id = this.clienteController.consutarNome(nome).getId();
-                        this.receberView = new ReceberView(this.receberController.consultarPeloCliente(id));
-                        this.receberView.imprimir();
+                        
                         break;
                     case "d":
-                        System.out.printf("\nInforme o número: ");
-                        numero = leia.nextInt();
-                        this.receberView = new ReceberView(this.receberController.consultarPeloNumero(numero));
-                        this.receberView.imprimir();
+                        
                         break;
                 }
                 break;
             case 5:
-                
+            System.out.println(Arrays.toString( this.calculoImposto.toArray() ));
+
+                //System.out.println(ListaDatas);
                 break;
             case 6:
                 return false;
@@ -148,3 +186,18 @@ public class MenuView {
         return true;
     }
 }
+
+//calculoImposto.clear();
+//calculoIssqn.clear();
+//dadosFiscais.clear();
+//datas.clear();
+//emissor.clear();
+//fatura.clear();
+//produtos.clear();
+//remetente.clear();
+//transporte.clear();
+//valores.clear();
+//remetentes.clear();
+//faturas.clear();
+//calculoImpostos.clear();
+//transportes.clear();

@@ -4,6 +4,7 @@ public class FaturaModel {
 
     ValoresModel valoresModel = new ValoresModel();
     DatasModel datasModel = new DatasModel();
+    int id;
 
     public void setDatasModel(DatasModel datasModel) {
         this.datasModel = datasModel;
@@ -19,5 +20,13 @@ public class FaturaModel {
 
     public ValoresModel getValoresModel() {
         return valoresModel;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 }

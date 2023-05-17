@@ -6,7 +6,7 @@ public class DadosFiscaisModel {
     int Entrada_Saida;
     long ChaveDeAcesso;
     String NaturezaDaOperação;
-    long ProtocoloDeAutorizaçãoDeUso;
+    String ProtocoloDeAutorizaçãoDeUso;
     String site = "www.nfe.fazenda.gov.br/portal ou site da Sefaz Autorizadora";
     DatasModel datasModel = new DatasModel();
 
@@ -49,11 +49,11 @@ public class DadosFiscaisModel {
         return NaturezaDaOperação;
     }
 
-    public void setProtocoloDeAutorizaçãoDeUso(long protocoloDeAutorizaçãoDeUso) {
+    public void setProtocoloDeAutorizaçãoDeUso(String protocoloDeAutorizaçãoDeUso) {
         ProtocoloDeAutorizaçãoDeUso = protocoloDeAutorizaçãoDeUso;
     }
 
-    public long getProtocoloDeAutorizaçãoDeUso() {
+    public String getProtocoloDeAutorizaçãoDeUso() {
         return ProtocoloDeAutorizaçãoDeUso;
     }
 

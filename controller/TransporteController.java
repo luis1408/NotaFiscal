@@ -3,9 +3,11 @@ package controller;
 import model.*;
 import java.util.ArrayList;
 public class TransporteController {
+    
+    public void clear() {}
 
     public ArrayList<TransporteModel> fakerTransporte(ArrayList<TransporteModel> ListaTransporte){
-
+        
         int x = 10;
         for (int i = 1; i < x; i++){
             TransporteModel transporte = new TransporteModel();

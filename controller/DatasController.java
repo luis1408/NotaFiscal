@@ -4,6 +4,8 @@ import model.*;
 import java.util.ArrayList;
 public class DatasController {
 
+    public void clear() {}
+
     public ArrayList<DatasModel> fakerDatas(ArrayList<DatasModel> ListaDatas){
 
         int x = 10;
@@ -12,7 +14,7 @@ public class DatasController {
             
             datas.setDataDaEmissão(i + "/" + i + "/" + 20 + i);
             datas.setDataDeSaidaEntrada(i + "/" + x + "/" + 20 + i);
-            datas.setHoraDeSaída(i +"h"+ i + "min");
+            datas.setHoraDeSaída(i +"h e "+ i + "min");
             datas.setDataVicto(i + "/" + i + "/" + 20 + x);
             
 

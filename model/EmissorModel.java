@@ -1,49 +1,49 @@
 package model;
 
 public class EmissorModel {
-    long CNPJ;
+    long cnpj;
     String rua;
     int num;
-    String Bairro;
-    String Cidade;
-    String UF;
-    long Cep;
+    String bairro;
+    String cidade;
+    String uf;
+    long cep;
     long inscriçãoEstadual;
-    long IncriçãoEstadualSubTributaria;
+    long incriçãoEstadualSubTributaria;
     long inscricaoMunicipal;
-    int TelFax;
+    int telFax;
 
-    public void setCNPJ(long cNPJ) {
-        CNPJ = cNPJ;
+    public void setCnpj(long cnpj) {
+        this.cnpj = cnpj;
     }
 
-    public long getCNPJ() {
-        return CNPJ;
+    public long getCnpj() {
+        return cnpj;
     }
 
     
     public void setBairro(String bairro) {
-        Bairro = bairro;
+        this.bairro = bairro;
     }
     
     public String getBairro() {
-        return Bairro;
+        return bairro;
     }
     
     public void setCep(long cep) {
-        Cep = cep;
+        this.cep = cep;
     }
 
     public long getCep() {
-        return Cep;
+        return cep;
     }
     
     public void setCidade(String cidade) {
-        Cidade = cidade;
+        this.cidade = cidade;
     }
     
     public String getCidade() {
-        return Cidade;
+        return cidade;
     }
     
     public void setNum(int num) {
@@ -62,12 +62,12 @@ public class EmissorModel {
         return rua;
     }
     
-    public void setUF(String uF) {
-        UF = uF;
+    public void setUf(String uf) {
+        this.uf = uf;
     }
     
-    public String getUF() {
-        return UF;
+    public String getUf() {
+        return uf;
     }
     
     public void setInscriçãoEstadual(long inscriçãoEstadual) {
@@ -79,11 +79,11 @@ public class EmissorModel {
     }
     
     public void setIncriçãoEstadualSubTributaria(long incriçãoEstadualSubTributaria) {
-        IncriçãoEstadualSubTributaria = incriçãoEstadualSubTributaria;
+        this.incriçãoEstadualSubTributaria = incriçãoEstadualSubTributaria;
     }
 
     public long getIncriçãoEstadualSubTributaria() {
-        return IncriçãoEstadualSubTributaria;
+        return incriçãoEstadualSubTributaria;
     }
 
     public void setInscricaoMunicipal(long inscricaoMunicipal) {
@@ -95,10 +95,10 @@ public class EmissorModel {
     }
     
     public void setTelFax(int telFax) {
-        TelFax = telFax;
+        this.telFax = telFax;
     }
 
     public int getTelFax() {
-        return TelFax;
+        return telFax;
     }
 }

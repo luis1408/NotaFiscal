@@ -4,6 +4,8 @@ import model.*;
 import java.util.ArrayList;
 
 public class RemetenteController {
+    
+    public void clear() {}
 
     public ArrayList<RemetenteModel> fakerRemetente(ArrayList<RemetenteModel> ListaRemetente){
 

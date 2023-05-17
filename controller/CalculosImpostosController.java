@@ -2,17 +2,13 @@ package controller;
 
 import model.*;
 import java.util.ArrayList;
-public class CalculoImpostosController {
 
-    public void clear() {}
-    
-    
-
+public class CalculosImpostosController{
     public ArrayList<CalculoImpostosModel> fakerCalculoImpostos(ArrayList<CalculoImpostosModel> ListaImpostos){
 
         int x = 10;
-        for (int i = 1; i < x; i++){
-            CalculoImpostosModel calculoImposto = new CalculoImpostosModel();
+        for (int i = 2; i < x; i++){
+            CalculoImpostosModel calculoImpostos = new CalculoImpostosModel();
             ValoresModel valoresModel = new ValoresModel();
 
             valoresModel.setBaseDeCalculoDeIcms(i+i);
@@ -30,11 +26,10 @@ public class CalculoImpostosController {
             
         
                   
-            calculoImposto.setValoresModel(valoresModel);
+            calculoImpostos.setValoresModel(valoresModel);
 
-            ListaImpostos.add(calculoImposto);
+            ListaImpostos.add(calculoImpostos);
         }
         return ListaImpostos;
     }
-   
 }
