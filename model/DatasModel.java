@@ -1,40 +1,40 @@
 package model;
 
 public class DatasModel {
-    String DataDaEmissão;
-    String DataDeSaidaEntrada;
-    String HoraDeSaída;
-    String DataVicto;
+    String dataDaEmissão;
+    String dataDeSaidaEntrada;
+    String horaDeSaída;
+    String dataVicto;
 
     public void setDataDaEmissão(String dataDaEmissão) {
-        DataDaEmissão = dataDaEmissão;
+        this.dataDaEmissão = dataDaEmissão;
     }
 
     public String getDataDaEmissão() {
-        return DataDaEmissão;
+        return dataDaEmissão;
     }
 
     public void setDataDeSaidaEntrada(String dataDeSaidaEntrada) {
-        DataDeSaidaEntrada = dataDeSaidaEntrada;
+        this.dataDeSaidaEntrada = dataDeSaidaEntrada;
     }
 
     public String getDataDeSaidaEntrada() {
-        return DataDeSaidaEntrada;
+        return dataDeSaidaEntrada;
     }
 
     public void setDataVicto(String dataVicto) {
-        DataVicto = dataVicto;
+        this.dataVicto = dataVicto;
     }
 
     public String getDataVicto() {
-        return DataVicto;
+        return dataVicto;
     }
 
     public void setHoraDeSaída(String horaDeSaída) {
-        HoraDeSaída = horaDeSaída;
+        this.horaDeSaída = horaDeSaída;
     }
 
     public String getHoraDeSaída() {
-        return HoraDeSaída;
+        return horaDeSaída;
     }
 }

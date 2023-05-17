@@ -2,19 +2,17 @@ package controller;
 
 import model.*;
 import java.util.ArrayList;
-public class ValoresController {
-    
-    public void clear() {}
 
-    public ArrayList<ValoresModel> fakerValores(ArrayList<ValoresModel> ListaValores){
+public class CalculosImpostosController{
+    public ArrayList<CalculoImpostosModel> fakerCalculoImpostos(ArrayList<CalculoImpostosModel> ListaImpostos){
 
         int x = 10;
-        for (int i = 1; i < x; i++){
+        for (int i = 2; i < x; i++){
+            CalculoImpostosModel calculoImpostos = new CalculoImpostosModel();
             ValoresModel valoresModel = new ValoresModel();
 
             valoresModel.setBaseDeCalculoDeIcms(i+i);
             valoresModel.setBaseDeCalculoDeIcmsSubstituicao(i);
-            valoresModel.setBaseDoCalculoDoISSQN(i+i);
             valoresModel.setValorDoICMS(i);
             valoresModel.setValorDoIcmsSubstituicao(i-i);
             valoresModel.setValorTotalDosProdutos(x*i);
@@ -25,14 +23,13 @@ public class ValoresController {
             valoresModel.setValorIpi(i);
             valoresModel.setValorTotalDosImpostos(i+i+i+i);
             valoresModel.setValorTotalDaNota(1);
-            valoresModel.setValorUnitario(i);
-            valoresModel.setValorTotal((10*i)+i+i+i+i+i+i+i-i);
-            valoresModel.setValorPis(i);
-            valoresModel.setValorConfins(i);
-            valoresModel.setValorDoISSQN(i);
+            
+        
+                  
+            calculoImpostos.setValoresModel(valoresModel);
 
-            ListaValores.add(valoresModel);
+            ListaImpostos.add(calculoImpostos);
         }
-        return ListaValores;
+        return ListaImpostos;
     }
 }

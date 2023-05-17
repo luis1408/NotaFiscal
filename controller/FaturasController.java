@@ -2,35 +2,33 @@ package controller;
 
 import model.*;
 import java.util.ArrayList;
-public class FaturaController {
-
-    public void clear() {}
-
+public class FaturasController {
     public ArrayList<FaturaModel> fakerFatura(ArrayList<FaturaModel> ListaFatura){
 
         int x = 10;
         for (int i = 1; i < x; i++){
-            FaturaModel fatura = new FaturaModel();
+            FaturaModel faturas = new FaturaModel();
             ValoresModel valoresModel = new ValoresModel();
             DatasModel datasModel = new DatasModel();
 
-            fatura.setId(1);
-            valoresModel.setValorTotal(3*i);
+            faturas.setId(5);
+            valoresModel.setValorTotal(5*i);
             datasModel.setDataVicto(2*i+"/"+2*i+'/'+2*i);
 
-            fatura.setId(2);
-            valoresModel.setValorTotal(6*i);
+            faturas.setId(6);
+            valoresModel.setValorTotal(3*i);
             datasModel.setDataVicto(1*i+"/"+3*i+'/'+2*i);
 
-            fatura.setId(3);
-            valoresModel.setValorTotal(5*i);
+            faturas.setId(7);
+            valoresModel.setValorTotal(4*i);
             datasModel.setDataVicto(2*i+"/"+1*i+'/'+2*i);
 
-            fatura.setDatasModel(datasModel);
-            fatura.setValoresModel(valoresModel);            
+            faturas.setDatasModel(datasModel);
+            faturas.setValoresModel(valoresModel);            
 
-            ListaFatura.add(fatura);
+            ListaFatura.add(faturas);
         }
         return ListaFatura;
     }
 }
+

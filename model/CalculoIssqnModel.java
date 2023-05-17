@@ -2,16 +2,8 @@ package model;
 
 public class CalculoIssqnModel {
 
-    ValoresModel valoresModel;
-    InscricaoMunicipalModel inscricaoMunicipalModel;
-
-    public void setInscricaoMunicipalModel(InscricaoMunicipalModel inscricaoMunicipalModel) {
-        this.inscricaoMunicipalModel = inscricaoMunicipalModel;
-    }
-
-    public InscricaoMunicipalModel getInscricaoMunicipalModel() {
-        return inscricaoMunicipalModel;
-    }
+    ValoresModel valoresModel = new ValoresModel();
+    EmissorModel emissorModel = new EmissorModel();
 
     public void setValoresModel(ValoresModel valoresModel) {
         this.valoresModel = valoresModel;
@@ -19,5 +11,13 @@ public class CalculoIssqnModel {
 
     public ValoresModel getValoresModel() {
         return valoresModel;
+    }
+
+    public void setEmissorModel(EmissorModel emissorModel) {
+        this.emissorModel = emissorModel;
+    }
+
+    public EmissorModel getEmissorModel() {
+        return emissorModel;
     }
 }
