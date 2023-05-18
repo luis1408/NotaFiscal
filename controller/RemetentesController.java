@@ -24,6 +24,16 @@ public class RemetentesController {
 
             ListaRemetente.add(remetentes);
         }
+
+        for (RemetenteModel remetente : ListaRemetente) {
+            System.out.println("\n" + remetente.getBairro());
+            System.out.println(remetente.getCep());
+            System.out.println(remetente.getCidade());
+            System.out.println(remetente.getInscriçãoEstadual());
+            System.out.println(remetente.getNome_razãoSocial());
+            System.out.println(remetente.getRua());
+        }
+
         return ListaRemetente;
     }
 }

@@ -9,6 +9,6 @@ public class CalculoImpostosModel {
     }
 
     public ValoresModel getValoresModel() {
-        return valoresModel;
+        return this.valoresModel;
     }
 }

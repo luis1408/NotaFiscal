@@ -30,6 +30,22 @@ public class CalculosImpostosController{
 
             ListaImpostos.add(calculoImpostos);
         }
+
+        for (CalculoImpostosModel calculoImpostosModel : ListaImpostos) {
+            System.out.println("\nICMS " + calculoImpostosModel.getValoresModel().getBaseDeCalculoDeIcms());
+            System.out.println("Calculo de Substituiçao " + calculoImpostosModel.getValoresModel().getBaseDeCalculoDeIcmsSubstituicao());
+            System.out.println("ISSQN " + calculoImpostosModel.getValoresModel().getBaseDoCalculoDoISSQN());
+            System.out.println("Desconto " + calculoImpostosModel.getValoresModel().getDesconto());
+            System.out.println("Despesas Acessoria " + calculoImpostosModel.getValoresModel().getOutrasDespesasAcessorias());
+            System.out.println("Cofins " + calculoImpostosModel.getValoresModel().getValorConfins());
+            System.out.println("Frete " + calculoImpostosModel.getValoresModel().getValorDoFrete());
+            System.out.println("ICMS " + calculoImpostosModel.getValoresModel().getValorDoICMS());
+            System.out.println("ISSQN " + calculoImpostosModel.getValoresModel().getValorDoISSQN());
+            System.out.println("Substituicao " + calculoImpostosModel.getValoresModel().getValorDoIcmsSubstituicao());
+            System.out.println("Seguro " + calculoImpostosModel.getValoresModel().getValorDoSeguro());
+            System.out.println("IPI " + calculoImpostosModel.getValoresModel().getValorIpi());
+
+        }
         return ListaImpostos;
     }
 }

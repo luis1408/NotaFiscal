@@ -7,13 +7,13 @@ public class CalculoImpostosController {
     public void clear() {}
     
     
+    CalculoImpostosModel calculoImposto = new CalculoImpostosModel();
+    ValoresModel valoresModel = new ValoresModel();
 
     public ArrayList<CalculoImpostosModel> fakerCalculoImpostos(ArrayList<CalculoImpostosModel> listaImpostos){
 
         int x = 10;
         for (int i = 1; i < x; i++){
-            CalculoImpostosModel calculoImposto = new CalculoImpostosModel();
-            ValoresModel valoresModel = new ValoresModel();
 
             valoresModel.setBaseDeCalculoDeIcms(i+i);
             valoresModel.setBaseDeCalculoDeIcmsSubstituicao(i);
@@ -36,21 +36,20 @@ public class CalculoImpostosController {
             
         }
 
-        for(int i = 1; i < x; i++){
-    
-            System.out.println(listaImpostos.get(i).getValoresModel().getBaseDeCalculoDeIcms());
-            listaImpostos.get(i).getValoresModel().getBaseDeCalculoDeIcms();
-            listaImpostos.get(i).getValoresModel().getBaseDeCalculoDeIcmsSubstituicao();
-            listaImpostos.get(i).getValoresModel().getValorDoICMS();
-            listaImpostos.get(i).getValoresModel().getValorDoIcmsSubstituicao();
-            listaImpostos.get(i).getValoresModel().getValorTotalDosProdutos();
-            listaImpostos.get(i).getValoresModel().getValorDoFrete();
-            listaImpostos.get(i).getValoresModel().getValorDoSeguro();
-            listaImpostos.get(i).getValoresModel().getDesconto();
-            listaImpostos.get(i).getValoresModel().getOutrasDespesasAcessorias();
-            listaImpostos.get(i).getValoresModel().getValorIpi();
-            listaImpostos.get(i).getValoresModel().getValorTotalDosImpostos();
-            listaImpostos.get(i).getValoresModel().getValorTotalDaNota();
+        for (CalculoImpostosModel calculoImpostosModel : listaImpostos) {
+            System.out.println("\nICMS " + calculoImpostosModel.getValoresModel().getBaseDeCalculoDeIcms());
+            System.out.println("Calculo de Substituiçao " + calculoImpostosModel.getValoresModel().getBaseDeCalculoDeIcmsSubstituicao());
+            System.out.println("ISSQN " + calculoImpostosModel.getValoresModel().getBaseDoCalculoDoISSQN());
+            System.out.println("Desconto " + calculoImpostosModel.getValoresModel().getDesconto());
+            System.out.println("Despesas Acessoria " + calculoImpostosModel.getValoresModel().getOutrasDespesasAcessorias());
+            System.out.println("Cofins " + calculoImpostosModel.getValoresModel().getValorConfins());
+            System.out.println("Frete " + calculoImpostosModel.getValoresModel().getValorDoFrete());
+            System.out.println("ICMS " + calculoImpostosModel.getValoresModel().getValorDoICMS());
+            System.out.println("ISSQN " + calculoImpostosModel.getValoresModel().getValorDoISSQN());
+            System.out.println("Substituicao " + calculoImpostosModel.getValoresModel().getValorDoIcmsSubstituicao());
+            System.out.println("Seguro " + calculoImpostosModel.getValoresModel().getValorDoSeguro());
+            System.out.println("IPI " + calculoImpostosModel.getValoresModel().getValorIpi());
+
         }
 
         return listaImpostos;

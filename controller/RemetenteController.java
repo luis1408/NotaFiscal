@@ -7,7 +7,7 @@ public class RemetenteController {
     
     public void clear() {}
 
-    public ArrayList<RemetenteModel> fakerRemetente(ArrayList<RemetenteModel> ListaRemetente){
+    public ArrayList<RemetenteModel> fakerRemetente(ArrayList<RemetenteModel> listaRemetente){
 
         int x = 10;
         for (int i = 1; i < x; i++){
@@ -24,8 +24,19 @@ public class RemetenteController {
             remetente.setInscriçãoEstadual(i);
             remetente.setTelFax(12345-678 + i);
 
-            ListaRemetente.add(remetente);
+            listaRemetente.add(remetente);
         }
-        return ListaRemetente;
+
+        for (RemetenteModel remetente : listaRemetente) {
+            System.out.println("\n" + remetente.getBairro());
+            System.out.println(remetente.getCep());
+            System.out.println(remetente.getCidade());
+            System.out.println(remetente.getInscriçãoEstadual());
+            System.out.println(remetente.getNome_razãoSocial());
+            System.out.println(remetente.getRua());
+        }
+
+        
+        return listaRemetente;
     }
 }

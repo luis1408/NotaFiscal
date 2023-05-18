@@ -31,6 +31,13 @@ public class FaturaController {
 
             ListaFatura.add(fatura);
         }
+
+        for (FaturaModel faturaModel : ListaFatura) {
+            System.out.println("\n" + faturaModel.getId());
+            System.out.println(faturaModel.getDatasModel().getDataVicto());
+            System.out.println(faturaModel.getValoresModel().getValorTotal());
+        }
+        
         return ListaFatura;
     }
 }

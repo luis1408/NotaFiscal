@@ -32,6 +32,30 @@ public class TransportesController {
 
             ListaTransporte.add(transportes);
         }
+
+        for (TransporteModel transporteModel : ListaTransporte) {
+            System.out.println(transporteModel.getCpfCnpj());
+            System.out.println(transporteModel.getNome_razãoSocial());
+            System.out.println(transporteModel.getRua());
+            System.out.println(transporteModel.getNum());
+            System.out.println(transporteModel.getBairro());
+            System.out.println(transporteModel.getCidade());
+            System.out.println(transporteModel.getUF());
+            System.out.println(transporteModel.getCep());
+            System.out.println(transporteModel.getInscriçãoEstadual());
+            System.out.println(transporteModel.getTelFax());
+            System.out.println(transporteModel.getCodigoANTT());
+            System.out.println(transporteModel.getPlacaDoVeículo());
+            System.out.println(transporteModel.getFretePorConta());
+            System.out.println(transporteModel.getEspecie());
+            System.out.println(transporteModel.getQtd());
+            System.out.println(transporteModel.getMarca());
+            System.out.println(transporteModel.getNumeração());
+            System.out.println(transporteModel.getPesoBruto());
+            System.out.println(transporteModel.getPesoLiquido());
+
+        }
+        
         return ListaTransporte;
     }
 }
