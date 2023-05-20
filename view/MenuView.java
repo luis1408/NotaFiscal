@@ -48,13 +48,14 @@ public class MenuView {
         }
     }
 
+    String subMenu;
+    int opcao;
+    int num;
+    String rs;
+    long cpfCnpj;
+    long valorTotal;
+
     public boolean menuPrincupal() {
-        String subMenu;
-        int opcao;
-        int num;
-        String rs;
-        long cpfCnpj;
-        long valorTotal;
 
         try {
             System.out.printf(
